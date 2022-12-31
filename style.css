@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Epilogue:wght@500&family=Lato:wght@300&family=League+Spartan:wght@900&display=swap');
+
+
+body{
+    font-family: 'Archivo', sans-serif; 
+    background-color: #FBE589;
+    height: 100vh;
+    width: 100vw;
+    /* margin: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #DFD4E6;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 1000px;
+    height: 500px;
+    
+}
+
+.notes-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 3rem;
+    flex-wrap:wrap-reverse;
+
+}
+
+.note-1{
+    background-color: #AFD9D9;
+
+}
+
+.note-2{
+    background-color: #AFD9D9;
+
+}
+
+.note-3{
+    background-color: #AFD9D9;
+
+}
+
+.note-4{
+    background-color: #AFD9D9;
+
+}
