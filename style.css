@@ -5,7 +5,7 @@ body{
     font-family: 'Archivo', sans-serif; 
     background-color: #FBE589;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     /* margin: 50px; */
     display: flex;
     flex-direction: column;
@@ -50,6 +50,12 @@ body{
 }
 
 
+.note-head button:hover{
+color:#bd4155 ;
+}
+
+
+
 .note-head{
     background-color: #FBE589;
     width: 100%;
@@ -67,7 +73,7 @@ body{
     margin-bottom: 0;
 }
 
-.note-body input{
+.note-body textarea{
     background-color: transparent;
     width: 130px;
     height: 100px;
@@ -75,7 +81,7 @@ body{
 }
 
 
-.note-body input:hover{
+.note-body textarea:hover{
     background-color:#98c7c7;
 }
 
