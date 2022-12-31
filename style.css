@@ -24,7 +24,8 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     padding-left: 50px;
-    padding-right: 50px;    
+    padding-right: 50px;   
+    border-radius: 10px; 
 }
 
 
@@ -42,6 +43,12 @@ body{
     gap: 20px;
     border-radius: 5px;
 }
+.note-head button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 
 .note-head{
     background-color: #FBE589;
@@ -53,16 +60,49 @@ body{
     display: flex;
     flex-direction: row-reverse;
 }
-
-button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
 .note-body p{
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.note-body input{
+    background-color: transparent;
+    width: 130px;
+    height: 100px;
+    border: none;
+}
+
+
+.note-body input:hover{
+    background-color:#98c7c7;
+}
+
+
+
+
+.head-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-container button{
+    border: none;
+    background-color: #FFC7D0;
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.head-container button:hover{
+    background-color: #f3b5bf;
+
+}
+
