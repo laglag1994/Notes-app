@@ -8,6 +8,7 @@ body{
     width: 100vw;
     /* margin: 50px; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -19,35 +20,23 @@ body{
     text-align: center;
     width: 1000px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
     
 }
 
+
+
 .notes-page{
+    background-color: #AFD9D9;
+    height: 10rem;
+    width: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    padding: 3rem;
-    flex-wrap:wrap-reverse;
-
+    text-align: center;
+    padding: 10px;
 }
 
-.note-1{
-    background-color: #AFD9D9;
-
-}
-
-.note-2{
-    background-color: #AFD9D9;
-
-}
-
-.note-3{
-    background-color: #AFD9D9;
-
-}
-
-.note-4{
-    background-color: #AFD9D9;
-
-}
