@@ -15,16 +15,16 @@ body{
 
 .container{
     background-color: #DFD4E6;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     text-align: center;
     width: 1000px;
     height: 500px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
-    
+    padding-left: 50px;
+    padding-right: 50px;    
 }
 
 
@@ -34,9 +34,35 @@ body{
     height: 10rem;
     width: 10rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:flex-start;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
+    gap: 20px;
+    border-radius: 5px;
 }
 
+.note-head{
+    background-color: #FBE589;
+    width: 100%;
+    top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 25px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.note-body p{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
