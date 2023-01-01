@@ -40,7 +40,7 @@ body{
     align-items: center;
     text-align: center;
     /* padding: 10px; */
-    gap: 20px;
+    gap: 5px;
     border-radius: 5px;
 }
 .note-head button{
@@ -73,15 +73,15 @@ color:#bd4155 ;
     margin-bottom: 0;
 }
 
-.note-body textarea{
+ textarea{
     background-color: transparent;
     width: 130px;
-    height: 100px;
+    height: 150px;
     border: none;
+    outline: none;
 }
 
-
-.note-body textarea:hover{
+textarea:hover{
     background-color:#98c7c7;
 }
 

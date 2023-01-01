@@ -9,12 +9,22 @@ const noteBody = document.getElementById('note-body')
 
 function addNote(note) {
     const notes = document.createElement('div')
-    notes.classList.add('note-body')
+    notes.classList.add('notes')
     notes.innerHTML = `
     
-    <div class="note-body" id="note-body">
-    <textarea id="text-area">${textArea}</textarea>
+<div class="notes-page">
+
+    <div class="note-head">
+        <button id="del-btn"><i class="fa-solid fa-trash"></i></button>
+        <button id="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+    </i></div>
+
+    
+    <div class="note-body">
+        <textarea id="text-area"></textarea>
     </div>
+
+</div>
     
     `
 }
