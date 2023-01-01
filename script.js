@@ -1,41 +1,53 @@
+const notePage = document.getElementById('.note-page')
 
+
+//buttons
 const addBtn = document.getElementById('add-btn');
-const delBtn = document.getElementById('del-btn');
-const editBtn = document.getElementById('edit-btn');
-const textArea = document.getElementById('text-area');
-const noteBody = document.getElementById('note-body')
+const delBtn = document.querySelector('.del-btn');
+const editBtn = document.querySelector('.edit-btn');
+
+
+const noteBody =notePage.querySelector('.note-body')
+const textArea = notePage.querySelector('text-area');
+
+
+
+editBtn.addEventListener('click',()=>{
+    notePage.classList.toggle('hidden');
+    textArea.classList.toggle('hidden');
+});
+
+textArea.addEventListener('input' ,(e) => {
+const {value}= e.target;
+noteBody.innerHTML=marked(value);
+
+console.log(textArea)
+})
+
+
+
 
 
 
 function addNote(note) {
-    const notes = document.createElement('div')
-    notes.classList.add('notes')
-    notes.innerHTML = `
-    
-<div class="notes-page">
 
-    <div class="note-head">
-        <button id="del-btn"><i class="fa-solid fa-trash"></i></button>
-        <button id="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-    </i></div>
-
-    
-    <div class="note-body">
-        <textarea id="text-area"></textarea>
-    </div>
-
-</div>
-    
-    `
 }
 
-function deleteNote();
+function deleteNote(){
+
+}
 
 
-function editNote();
+function editNote(){
+
+}
 
 
-function addToLS();
+function addToLS(){
+
+}
 
 
-function removeFromLS();
+function removeFromLS(){
+
+}
