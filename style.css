@@ -73,7 +73,7 @@ color:#bd4155 ;
     margin-bottom: 0;
 }
 
- textarea{
+.notes-page textarea{
     background-color: transparent;
     width: 130px;
     height: 150px;
@@ -81,8 +81,15 @@ color:#bd4155 ;
     outline: none;
 }
 
-textarea:hover{
+.notes-page textarea:hover{
     background-color:#98c7c7;
+}
+
+.notes-page .hidden{
+    display: none;
+    background-color:#7bafaf;
+    height: 300px;
+
 }
 
 

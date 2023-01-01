@@ -9,12 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
-<script src="https://kit.fontawesome.com/493233d6f9.js" crossorigin="anonymous"></script><script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/493233d6f9.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.1.1/marked.min.js"></script>
+
 
 </head>
 
@@ -23,26 +23,28 @@
 
 
         <div class="head-container">
-        <h1> write your notes</h1>
-        <button id="add-btn"> + Add note </button>
+            <h1> write your notes</h1>
+            <button id="add-btn"> + Add note </button>
         </div>
 
-
-        <div class="notes-page" >
+        <!-- ///////////////////////////// -->
+        <div class="notes-page">
 
             <div class="note-head">
                 <button class="del-btn"><i class="fa-solid fa-trash"></i></button>
                 <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-            </i></div>
+                </i>
 
-            
-            <div class="note-body"></div>
-            <textarea id="text-area"></textarea>
+            </div>
+
+
+            <div class="note-body hidden"></div>
+            <textarea></textarea>
 
         </div>
-
-        
+        <!-- ////////////////////////////// -->
     </div>
 </body>
+
 
 </html>
