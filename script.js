@@ -4,7 +4,7 @@ const notePage = document.getElementById('.note-page')
 //buttons
 // const addBtn = document.getElementById('add-btn');
 const delBtn = document.querySelector('.del-btn');
-const editBtn = document.querySelector('.edit-btn');
+const editBtn = document.getElementById('edit-btn');
 
 
 const noteBody =document.querySelector('.note-body')
