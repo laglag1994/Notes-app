@@ -6,7 +6,6 @@ const addNoteBtn=notesContainer.querySelector('.add-note')
 function getNotes(){
 return JSON.parse(localStorage.getItem('notes')|| '[]');
 }
-console.log(getNotes)
 
 
 //save the new notes to LS
