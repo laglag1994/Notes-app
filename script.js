@@ -6,10 +6,9 @@ const editBtn = notesContainer.querySelector('.edit-btn');
 const delBtn = notesContainer.querySelector('.del-btn');
 
 
-//get notes and display
+//get and display notes
 getNotes().forEach(note => {
-    const noteEl = createNoteElement(note.id, note.noteContent);
-    
+    createNoteElement(note.id, note.noteContent);
 });
 
 
@@ -29,9 +28,6 @@ function saveNotes(notes) {
 function createNoteElement(id, noteContent) {
     const element = document.createElement('textarea');
 
-
-    
-
     element.classList.add('note-body');
     element.value = noteContent;
 
@@ -43,7 +39,11 @@ function createNoteElement(id, noteContent) {
         deleteNote(id, element);
     })
 
+
+    document.append(element)
+
     return element;
+
 }
 
 //add a new note 
@@ -54,13 +54,11 @@ function addNote() {
 
 //udating notes
 function updateNote(id, newNoteContent) {
-    console.log('update note')
-    console.log(id, newNoteContent)
+
 
 }
 
 //deleting a note
 function deleteNote(id, element) {
-    console.log('delete note')
-    console.log(id, newNoteContent)
+\
 }
