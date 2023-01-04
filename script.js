@@ -1,10 +1,8 @@
-const notesContainer = document.getElementById('notes-page');
 
 
-const addNoteBtn = notesContainer.querySelector('.add-note');
-const editBtn = notesContainer.querySelector('.edit-btn');
-const delBtn = notesContainer.querySelector('.del-btn');
+const addNoteBtn = document.querySelector('.add-note');
 
+const baba = document.getElementById('baba-flex');
 
 //get and display notes
 getNotes().forEach(note => {
@@ -24,10 +22,36 @@ function saveNotes(notes) {
     localStorage.setItem('note', JSON.stringify(notes))
 }
 
+function oneNote(one) {
+    const allNotes = getNotes();
+    allNotes.push(one);
+
+    saveNotes(allNotes);
+}
+
 //create new note from HTML
 function createNoteElement(id, noteContent) {
-    const element = document.createElement('textarea');
 
+    const notepage = document.createElement("div");
+    notepage.classList.add("notes-page");
+
+    const noteHead = document.createElement('div');
+    noteHead.classList.add("note-head");
+
+    const editBtn = document.createElement("button");
+    editBtn.classList.add("edit-btn");
+
+
+    const delBtn = document.createElement("button");
+    editBtn.classList.add("del-btn");
+
+    const delIcon = document.createElement("i");
+    delIcon.classList.add("fa-solid", "fa-trash");
+
+    const editIcon = document.createElement("i");
+    editIcon.classList.add("fa-solid", "fa-pen-to-square")
+
+    const element = document.createElement('textarea');
     element.classList.add('note-body');
     element.value = noteContent;
 
@@ -36,11 +60,19 @@ function createNoteElement(id, noteContent) {
     });
 
     delBtn.addEventListener('click', () => {
-        deleteNote(id, element);
+        deleteNote(id, notepage);
     })
 
 
-    document.append(element)
+    delBtn.append(delIcon)
+    editBtn.append(editIcon)
+    noteHead.append(editBtn)
+    noteHead.append(delBtn)
+    notepage.append(noteHead)
+    notepage.append(element)
+    baba.append(notepage)
+
+
 
     return element;
 
@@ -48,7 +80,13 @@ function createNoteElement(id, noteContent) {
 
 //add a new note 
 function addNote() {
-
+    const id = Math.round(Math.random() * 10000)
+    createNoteElement(id, '')
+    const one = {
+        content: "",
+        id
+    };
+    oneNote(one);
 }
 
 
@@ -60,5 +98,14 @@ function updateNote(id, newNoteContent) {
 
 //deleting a note
 function deleteNote(id, element) {
-\
+    element.remove();
+    const allNotes = getNotes().filter(note => {
+        if (note.id == id) {
+            return false
+        }
+        return true
+    })
+
+    saveNotes(allNotes);
+
 }

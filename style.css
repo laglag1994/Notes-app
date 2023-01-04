@@ -108,3 +108,9 @@ color:#bd4155 ;
 
 }
 
+.baba-flex{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+}
