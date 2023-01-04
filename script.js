@@ -6,7 +6,7 @@ const baba = document.getElementById('baba-flex');
 
 //get and display notes
 getNotes().forEach(note => {
-    createNoteElement(note.id, note.noteContent);
+    createNoteElement(note.id, note.content);
 });
 
 
@@ -93,6 +93,16 @@ function addNote() {
 //udating notes
 function updateNote(id, newNoteContent) {
 
+    const allNotes = getNotes().map(note => {
+        if (note.id !== id) {
+            return note;
+        }
+        note.content = newNoteContent
+        return note
+    });
+
+    saveNotes(allNotes);
+
 
 }
 
@@ -109,3 +119,5 @@ function deleteNote(id, element) {
     saveNotes(allNotes);
 
 }
+
+
